@@ -1,0 +1,42 @@
+services:
+  webhook:
+    build: .
+    image: tr-ar-webhook:latest
+    container_name: tr-ar-webhook
+    restart: unless-stopped
+
+    env_file: .env
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /opt/scripts:/opt/scripts:ro
+      - /opt/projects/tr-ar:/opt/projects/tr-ar
+      - /opt/projects/tr-ar-ai:/opt/projects/tr-ar-ai
+      - /opt/projects/llm-council:/opt/projects/llm-council
+      - /opt/projects/Analytics_Morad:/opt/projects/Analytics_Morad
+      - /usr/libexec/docker/cli-plugins:/usr/local/lib/docker/cli-plugins:ro
+
+    networks:
+      - proxy
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.webhook.rule=Host(`webhook.junkpro.duckdns.org`)"
+      - "traefik.http.routers.webhook.entrypoints=websecure"
+      - "traefik.http.routers.webhook.tls.certresolver=myresolver"
+      - "traefik.http.services.webhook.loadbalancer.server.port=8765"
+
+    deploy:
+      resources:
+        limits:
+          memory: 128m
+          cpus: '0.1'
+
+    logging:
+      options:
+        max-size: "5m"
+        max-file: "2"
+
+networks:
+  proxy:
+    external: true
