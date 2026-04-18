@@ -13,10 +13,14 @@ PORT           = int(os.environ.get("WEBHOOK_PORT", "8765"))
 
 # مشاريع مدعومة: repo_name -> deploy_script
 PROJECTS = {
-    "TR_AR":       "/opt/scripts/deploy-tr-ar.sh",
-    "TR_AR_AI":    "/opt/scripts/deploy-tr-ar-ai.sh",
+    "TR_AR":           "/opt/scripts/deploy-tr-ar.sh",
+    "TR_AR_AI":        "/opt/scripts/deploy-tr-ar-ai.sh",
     "LLM-Council":     "/opt/scripts/deploy-llm-council.sh",
     "Analytics_Morad": "/opt/scripts/deploy-analytics-morad.sh",
+    "server-health":   "/opt/scripts/deploy-server-health.sh",
+    "server-webhook":  "/opt/scripts/deploy-server-webhook.sh",
+    "rag-pipeline":    "/opt/scripts/deploy-rag-pipeline.sh",
+    "server-configs":  "/opt/scripts/deploy-server-configs.sh",
 }
 
 def tg(text: str):

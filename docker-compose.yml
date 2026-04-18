@@ -9,11 +9,16 @@ services:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /opt/scripts:/opt/scripts:ro
+      - /opt/scripts:/opt/scripts
       - /opt/projects/tr-ar:/opt/projects/tr-ar
       - /opt/projects/tr-ar-ai:/opt/projects/tr-ar-ai
       - /opt/projects/llm-council:/opt/projects/llm-council
       - /opt/projects/Analytics_Morad:/opt/projects/Analytics_Morad
+      - /opt/projects/server-health:/opt/projects/server-health
+      - /opt/projects/webhook:/opt/projects/webhook
+      - /opt/apps:/opt/apps
+      - /home/claude/rag-pipeline:/home/claude/rag-pipeline
+      - /root/.git-credentials:/root/.git-credentials:ro
       - /usr/libexec/docker/cli-plugins:/usr/local/lib/docker/cli-plugins:ro
 
     networks:
