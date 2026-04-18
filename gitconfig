@@ -1,0 +1,9 @@
+[user]
+    name = junkpro518
+    email = junkpro518@gmail.com
+
+[safe]
+    directory = *
+
+[credential]
+    helper = store

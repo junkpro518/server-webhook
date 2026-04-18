@@ -19,6 +19,7 @@ services:
       - /opt/apps:/opt/apps
       - /home/claude/rag-pipeline:/home/claude/rag-pipeline
       - /root/.git-credentials:/root/.git-credentials:ro
+      - /opt/projects/webhook/gitconfig:/root/.gitconfig:ro
       - /usr/libexec/docker/cli-plugins:/usr/local/lib/docker/cli-plugins:ro
 
     networks:
