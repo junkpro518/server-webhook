@@ -16,6 +16,8 @@ PROJECTS = {
     "TR_AR":           "/opt/scripts/deploy-tr-ar.sh",
     "TR_AR_AI":        "/opt/scripts/deploy-tr-ar-ai.sh",
     "LLM-Council":     "/opt/scripts/deploy-llm-council.sh",
+    "llm-council":     "/opt/scripts/deploy-llm-council.sh",
+    "Quran_Alarm":     "/opt/scripts/deploy-quran-alarm.sh",
     "Analytics_Morad": "/opt/scripts/deploy-analytics-morad.sh",
     "server-health":   "/opt/scripts/deploy-server-health.sh",
     "server-webhook":  "/opt/scripts/deploy-server-webhook.sh",
