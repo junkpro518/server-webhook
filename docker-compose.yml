@@ -16,6 +16,7 @@ services:
       - /opt/projects/Analytics_Morad:/opt/projects/Analytics_Morad
       - /opt/projects/server-health:/opt/projects/server-health
       - /opt/projects/webhook:/opt/projects/webhook
+      - /opt/projects/I_did_it:/opt/projects/I_did_it
       - /opt/apps:/opt/apps
       - /home/claude/rag-pipeline:/home/claude/rag-pipeline
       - /root/.git-credentials:/root/.git-credentials:ro

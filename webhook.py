@@ -23,6 +23,7 @@ PROJECTS = {
     "server-webhook":  "/opt/scripts/deploy-server-webhook.sh",
     "rag-pipeline":    "/opt/scripts/deploy-rag-pipeline.sh",
     "server-configs":  "/opt/scripts/deploy-server-configs.sh",
+    "I_did_it":        "/opt/scripts/deploy-i-did-it.sh",
 }
 
 def tg(text: str):
